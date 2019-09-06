@@ -13,8 +13,6 @@ module Types
 
     def tweets(search_param:, limit: 5, result_type: 'recent')
       # Twitter api client use for search tweets.
-      # puts "Here goes the search param: "
-      # puts search_param
       tweets = format_tweets(search_param, limit, result_type)
       tweets
     end
