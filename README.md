@@ -25,7 +25,7 @@ Then proceed with:
 ```
 $ rails s
 ```
-The API will be hosted in http://localhost:3000 if you run it locally OR the heroku url will be hosted in the description for performing requests.
+The API will be hosted in http://localhost:3000 if you run it locally OR the heroku url will be in the description for performing requests.
 
 ### Queries examples
 
@@ -38,14 +38,14 @@ query {
         text
         date
         photoUrl
-      photoShortUrl
+        photoShortUrl
         photoLinkTwitter
-      videoUrl
-      videoShortUrl
-      videoLinkTwitter
-      gifUrl
-      gifShortUrl
-      gifLinkTwitter
+        videoUrl
+        videoShortUrl
+        videoLinkTwitter
+        gifUrl
+        gifShortUrl
+        gifLinkTwitter
         likes
         rts
         textUrls {
