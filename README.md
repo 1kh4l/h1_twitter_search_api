@@ -1,24 +1,70 @@
-# README
+# GRAPHQL API TWITTER CLI
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project was built using Ruby on Rails and GraphQl. The purpose was to create a GraphQl API gathering the data from the Twitter API; just for learning a bit of graphql and Rails :p. 
 
-Things you may want to cover:
+### Requirements:
 
-* Ruby version
+* Ruby version ~> 2.6.3
 
-* System dependencies
+* Rails version ~> 6.0.0
 
-* Configuration
+* Sqlite3 version ~> 3.24.0
 
-* Database creation
+### Configuration
 
-* Database initialization
+### Installation
 
-* How to run the test suite
+Run the next commands:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ bundle install
+```
 
-* Deployment instructions
+Then proceed with:
 
-* ...
+```
+$ rails s
+```
+The API will be hosted in http://localhost:3000 if you run it locally OR the heroku url will be hosted in the description for performing requests.
+
+### Queries examples
+
+```
+# Retrieving tweets
+query {
+    tweets(searchParam:"We sincerely hope this tweet was read in the language of HAS.", limit: 10) {
+    results {
+        id
+        text
+        date
+        photoUrl
+      photoShortUrl
+        photoLinkTwitter
+      videoUrl
+      videoShortUrl
+      videoLinkTwitter
+      gifUrl
+      gifShortUrl
+      gifLinkTwitter
+        likes
+        rts
+        textUrls {
+          name
+          content {
+            displayUrl
+            url
+          }
+        }
+        hashtags {
+          name
+          content {
+               text
+          }
+        }
+    }
+    totalTweets
+    topHashtags
+  }
+}
+```
+
